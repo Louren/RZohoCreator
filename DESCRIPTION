@@ -1,0 +1,17 @@
+Package: RZohoCreator
+Type: Package
+Title: Zoho Creator Connector for R
+Version: 0.1.0
+Author: Louren van Garderen
+Maintainer: Uw Computerstudent <info@uwcomputerstudent.nl>
+Description: This packages provides the zoho_get_view function which can be used to retrieve data from Zoho. If no authtoken is set, the script asks the user for one (and then stores it in the system keyring). The data is transformed to a dataframe for easy further processing.
+    Usage\: zoho_get_view(view,criteria,no_limit = false)
+    view: the name of the view (i.e. the part in the url after http://creator.zoho.com/.../.../#View:)
+    criteria: an optional list with criteria (i.e. list(var1="y",var2="x"))
+    no_limit: default to false, and states that the data should NOT be limited (if true). A limit is applied because otherwise datasets can become huge when testing.
+License: LGPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    keyring,
+    httr
